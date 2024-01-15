@@ -1,25 +1,27 @@
-console.log ("testing")
+//example input = [10, 3, 2]
+//expected output = 5
 
-let arr1 = ["Kaosara", "Lauren"]
-let arr2 = ["Kaosara"]
+let arrayOfNumbers = [10,20,9,8,100]
 
-function findMissingElements(arr1, arr2) {
-
-    let newArray = []
-
-    for (let i = 0; i < arr1.length; i++) {
-        for (let j = 0; j < arr2.length; j++) {
-            if (arr1[i] != arr2[j]) {
-
-                newArray.push(arr1[i])
-            }
-        }
+const calculateAverageNumber = (arrayOfNumbers) => {
     
+    let sum = 0
+    
+    for (let i = 0; i < arrayOfNumbers.length; i++) {
+
+        sum += arrayOfNumbers[i]
+   
     }
 
-    return newArray;
-}
+    const average = sum / arrayOfNumbers.length
 
-const missingElements = findMissingElements(arr1, arr2)
-console.log ("Expecting", ["Lauren"], "Actual", missingElements)
-export { findMissingElements };
+    return average 
+
+    }
+
+
+const average = calculateAverageNumber (arrayOfNumbers)
+console.log (average)
+export { calculateAverageNumber };
+
+

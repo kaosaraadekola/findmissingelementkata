@@ -1,3 +1,3 @@
-import { findMissingElements } from "./sum.js";
+import { calculateAverageNumber } from "./sum.js";
 
 
